@@ -92,7 +92,6 @@ def crawler(maxpage, query, sort, s_date, e_date):
         date_lists = soup.select('.info_group')
         for date_list in date_lists:
             date_list = re.sub('<a.*?</a>', '', str(date_list)).strip()
-            print(date_list)
             date_cleansing(date_list)  # 날짜 정제 함수사용
 
 
